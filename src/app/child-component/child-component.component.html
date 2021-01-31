@@ -1,0 +1,7 @@
+<p>child-component</p>
+<span>Message from parent component pass down {{childMessage}}</span><br />
+<label>Add message: <input #newItem ></label>
+<button (click)="addNewMessage(newItem.value)">Add to parent's list</button>
+
+<p>example pipe {{ now | date:'short' }}</p>
+<p>{{testPipe | capitalize}}</p>

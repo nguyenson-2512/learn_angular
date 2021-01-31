@@ -1,0 +1,4 @@
+<app-child-component [childMessage]="parentMessage" (newMessageEvent)="addMessage($event)"></app-child-component>
+<ul *ngFor="let message of list">
+  <li>{{message}}</li>
+</ul>
