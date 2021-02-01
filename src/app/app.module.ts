@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -14,6 +15,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { ObjectComponent } from './object/object.component';
 
+import { StoreModule } from '@ngrx/store';
+import { HeroFormComponent } from './hero-form/hero-form.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +27,14 @@ import { ObjectComponent } from './object/object.component';
     AComponentComponent,
     BComponentComponent,
     PageNotFoundComponent,
-    ObjectComponent
+    ObjectComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    StoreModule.forRoot({}),
     RouterModule.forRoot([
       {path: 'a', component: AComponentComponent},
       {path: 'b', component: BComponentComponent},
